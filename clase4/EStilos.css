@@ -1,0 +1,287 @@
+*{margin: 0;
+padding: 0;
+box-sizing: border-box;
+} 
+/* este scroll-behavior me desplaza lo de contacto, servico, portafolio, expertes etc, hace el salto de todos y me lleva abajo*/
+:root{
+scroll-behavior:smooth; /*antes estaba smoth*/
+}
+
+body{
+    font-family: 'Outfit', sans-serif; 
+   } 
+   /* el margin auto es para que centre todo
+   y este contenedor que centra esta combinado con mi html que 
+   dice contenedor. si quiero ponerle estilo a otra cosa pongo su nombre y listo. lo hace.
+   el padding es para que quecen separados los elementos*/
+   .contenedor {
+       width: 90%;
+       min-width: 1200px;
+       overflow: hidden;
+   margin: auto;
+   padding: 60px 0;
+    }
+    /* Header  y aca va el degrade de gradiantes 
+    (pasarlo a rgb apretando sus colores, pasarlo a uan trasparencia de 50%) DE ARRIBA DE TODO
+    ACA EN ESTE HEADER DE BACKGROUND AL FIN PUDE ACOMODAR LA IMAGEN, FIJARME MAS*/
+    
+header {
+    height: 100vh;
+    background-image: linear-gradient(120deg, rgba(131, 199, 184, 0.534) 0%, rgba(207, 176, 216, 0.24) 100%), url(../git/cosas/MUJERorganizacion-de-eventos.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    
+} 
+/* aca head es el estilo  para centrar  la primera imagen, */
+.head{
+    text-align: center;
+padding: 0;
+height: 100%;
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column; /* EL FLEX ME BAJO EL SUBTITULO ABAJO DEL TITULOcon esto centre el parrafo  de la imagen, de maneral central y vertical */
+color: rgb(8, 8, 8);
+}
+
+.navegacion{
+    position: fixed;
+    z-index: 60; /*hace que este fijo por mas que muevas*/
+    top: 30px;
+    right: 30px;
+    background-color: aliceblue;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    border-radius: 15px;
+    box-shadow: 0 0 6px rgba(0, 0, 0, .5);
+    
+    
+}
+.menu-navegacion{
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 30vw;
+    height: 100%;
+    background-image: linear-gradient(135deg, #c6dd88 0%, #b5d190 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    /*transition: tranform .3s ease-in-out; 110*/
+    transform: translate(110%);
+    box-shadow: rgba(0, 0, 0, .5);
+    z-index: 50;
+}
+.spread{transform: translate(0);
+
+}
+.menu-navegacion{
+    color: #afb1c0;
+    text-decoration: none;
+    
+}
+.subtitulo{
+    text-align: center;
+    font-weight: 300;
+    color: black;
+    margin-bottom: 40px;
+    font-size: 40px;
+    background: rgba(227, 250, 127, 0.938);
+}
+.contenedor-servicio{
+    text-align:center;
+    
+ /* le dejo el fondo blanco porque la imagen al ser blanca me quedo feo */
+}
+.contenedor-servicio img{
+    width: 50%
+
+    
+}
+.service{
+    margin-bottom: 40px;/* con esto separas el parrafo del servicio*/
+    
+}
+.paragraph{
+    text-align: left;
+    font-weight:bold;
+    
+}
+.n-service{
+    text-align:left;
+    margin-bottom: 10px; 
+    color: rgb(104, 104, 16);
+    text-shadow: #656b99 5px;
+    
+}
+.mostrador{
+    background: #e2e3eb;
+}
+.contenedor-mostrador{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    max-width: 1000px;
+    margin: auto;
+}
+    
+.img-mostrador{ /*ver como modificar lo del menu*/
+   width: 300px;
+   height: 200px;
+   box-shadow:   1px 5px 5px;
+   margin-bottom: 30px;
+   object-fit: cover;
+   filter: brightness(70%);
+   cursor: pointer;
+   animation: event 1.5s infinite alternate;
+   border-radius: 10px;
+   z-index: 20;
+   
+}
+@keyframes event {
+    to{
+        transform: scale(1);
+    }
+    from{
+        transform: scale(1.05);
+    }
+}
+
+
+.integrantes{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+   background: #afb1c0;
+
+}
+.contenedor-integrantes{
+    width: 30%;
+    text-align: center;
+    margin-bottom: 20px;
+    background: #e2d0e0;
+   
+    
+}
+.contenedor-integrantes img{
+    width: 80%;
+    display: block;
+    margin: 0 auto;
+    border-radius: 40%;
+
+}
+.n-expertos{
+    display: inline-block;
+    margin-top: 20px;
+    width: 100%;
+    font-weight: 400;
+}
+.n-integrantes{
+    display: inline-block;
+    margin-top: 20px;
+    width: 100%;
+    font-weight: 400;
+}
+.footer{
+    background: #04071d;
+    padding-bottom: 0.1px;
+   
+}
+.contenedor-footer-content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding-top: 60px;
+    padding-bottom: 40px;
+    background: #c2c6e4;
+}
+.contacto-creadores{
+    width: 50%;
+    color: rgb(5, 56, 56);
+   
+}
+.brand{
+    font-weight: 500;
+    font-size: 40px; 
+}
+.p{
+    font-weight: 500;
+}
+.social-media{
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;
+}
+.social-media-icon{
+    display: inline-block;
+    margin-left: 20px;
+    width: 60px;
+    height: 60px;
+    border: 1px solid rgb(231, 238, 234);
+    border-radius: 50%; /*sacarlo*/
+    text-align: center;
+    color: #c2c6e4;
+}
+.social-media-icon:hover{
+    background: #e2e3eb;
+    color: #5d1c92;
+}
+.social-media-icon i{
+    font-size: 30px;
+    line-height: 60px;
+}
+.formulario{
+    background:#e2d8d8;
+    min-height: 100vh;
+    width: 100%;
+    display:block;/*siempre va a quedar mejor el block, ocupa toda la pantalla*/
+    padding: 10px ;
+
+}
+.contenedor-formulario{
+    text-align:center;
+    margin: 50px;
+    
+}
+.subtitulo-formulario{
+    text-align: center;
+    padding: 20px;
+}
+.form{
+    background-color: #fff;
+    width: 98;
+    margin:  auto;
+    max-width: 400px;
+    border-radius: 1em;
+    padding: 3.5em 1.5em;
+}
+.form__input{
+    font-family: inherit;
+    font-size: 1rem;
+    padding: .8em 1em;
+    outline: none;
+    border: none;
+    border: 1px solid #BBB0BB ;
+    border-radius: 0.2em;
+    
+}
+.form__container{
+    width: 100%;
+    display: grid;
+    gap: 1em;
+    grid-auto-columns: 100%;
+}
+.form__input--message{
+    resize: none;
+    padding: 1.8em 1em;
+    margin-bottom: .5em;
+    width: 100%;
+}
+
